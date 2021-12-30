@@ -1,0 +1,55 @@
+				    INTERVIEW SHORTLIST
+
+An interview selection committee of a specific company takes into account
+the Grade Point Aggregate (GPA) and the marks scored by the candidate in their pre-placement test.
+The test is out of fifty marks and the GPA of any candidate is
+an integer between zero and ten (both inclusive).
+To make a Total Score out of a hundred, the committee multiplies
+the GPA by 5 and adds it to the test score.
+
+Total Score = Test Score + (GPA*5)
+
+After this, the committee categorizes the students into three groups - 
+
+Not Selected ->  0 < Total Score < 50
+Wait List -> 50<= Total Score < 75
+Selected -> 75<= Total Score
+
+You are required to predict if the person is Not Selected, in Wait List or in Selected. 
+
+*********************************************************************************
+INPUT:
+The first input is an integer G which indicates the GPA of the candidate (0<=G<=10)
+The second input is also an integer S which indicates the candidate's test score (0<=S<=50)
+
+OUTPUT:
+Output in a single line
+"Selected" if the candidate is selected,
+"Wait Listed" if the candidate is on a wait list, and
+"Not Selected" if the candidate is not selected.
+*********************************************************************************
+
+Sample Input/Output:
+
+Input:
+5
+25
+Output:
+Wait Listed
+
+Input:
+10
+25
+Output:
+Selected
+
+Input:
+9
+4
+Output:
+Not Selected
+
+*********************************************************************************
+TIME ALLOWED : 5sec
+
+MEMORY LIMIT : Maximum 10^5 commands are only allowed.

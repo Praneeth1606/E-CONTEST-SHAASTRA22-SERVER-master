@@ -1,0 +1,37 @@
+                    COLOUR CODING
+
+In a particular software, colours have a very specific key-value pair as follows:
+		1 - Cyan
+		2 - Magenta
+		3 - Yellow
+		4 - Black
+The company is looking for a code in AsciiDots to execute this in such a way that
+for a given input integer 'n', the software outputs the corresponding colour.
+
+*********************************************************************************
+INPUT : The input consists of a single integer that indicates the 'key' of the colour.
+CONSTRAINT: (1<=key<=4)
+
+OUTPUT: A single word that indicates the value, i.e., the colour for the given number. Print:
+"Cyan" if the input is 1
+"Magenta" if the input is 2
+"Yellow" if the input is 3
+"Black" if the input is 4
+*********************************************************************************
+
+Sample Input/Output:
+
+Input:
+4
+Output:
+Black
+
+Input:
+2
+Output:
+Magenta
+
+*********************************************************************************
+TIME ALLOWED : 5sec
+
+MEMORY LIMIT : Maximum 10^5 commands are only allowed.

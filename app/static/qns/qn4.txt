@@ -1,0 +1,39 @@
+                    CRICKET MATCH
+
+PROBLEM STATEMENT:
+In a fierce test match against South Africa, Indian skipper Virat Kohli scored 254 runs off 336 balls.
+Out of the 336 balls he had faced, he scored 'n' fours (4 runs),
+some singles (1 run) and the rest of them were dot balls (no run was scored).
+For a given 'n' find out the number of dot balls that he had faced.
+
+Note that each ball he had faced is only a dot ball, a single or a four.
+
+*********************************************************************************
+INPUT: One integer 'n' indicating the number of fours he had scored (0<=n<63)
+
+CONSTRAINT: (0<=n<63)
+
+OUTPUT: A single integer that indicates the number of dot balls he would have faced
+*********************************************************************************
+
+Sample Input/Output:
+
+Input:
+29
+Output:
+169
+
+Input:
+1
+Output:
+85
+
+Input:
+16
+Output:
+130
+
+*********************************************************************************
+TIME ALLOWED : 5sec
+
+MEMORY LIMIT : Maximum 10^5 commands are only allowed.

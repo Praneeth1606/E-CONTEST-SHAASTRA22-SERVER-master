@@ -1,0 +1,44 @@
+				    SUM AND DIFFERENCE
+	
+PROBLEM STATEMENT :
+//American Express are deciding if they could allow 4 digit CVV pins instead of the existing
+//3 digit ones.
+The sum of two numbers is said to be "a" and their difference is said to be "b".
+Using the given esoteric language, can you write a program to help us find
+twice the value of the smaller number?
+
+*********************************************************************************
+INPUT :
+Two integers 'a' and 'b' (0<=b<=a<=999)
+
+OUTPUT :
+One 'integer' number indicating 'twice' the value of the smaller number
+*********************************************************************************
+
+Sample Input/Output:
+
+Input:
+104
+32
+Output:
+72
+
+Input:
+910
+124
+Output:
+786
+
+Input:
+721
+192
+Output:
+529
+
+*********************************************************************************
+TIME ALLOWED : 5sec
+
+MEMORY LIMIT : Maximum 10^5 commands are only allowed.
+
+NOTE :
+Any arithmetic division in AsciiDots converts an integer to a float

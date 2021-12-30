@@ -1,0 +1,64 @@
+
+Welcome to Shaastra's E-Contest.
+The 'E' in E-Contest stands for Esoteric Languages(you might have guessed this already),
+the contest deals with solving basic questions in a language which hopefully is completely new to you.
+
+This time, we have chosen the language as "ASCII DOTS". 
+
+It is fun language which is very different from the conventional programming languages
+such as python, C++ etc. The languages employs dots which travel along various paths.
+Then split, merge with some conditions or even disappear. Hope you find it super fun and All the best.
+
+***** NOTE ***** You can view this sheet whenever you want during the contest, so use your time wisely
+
+********************************************************************
+SYNTAX SHEET :
+********************************************************************
+
+The dots are initialised by '.'. They travel horizontally along '-' and vertically along'|'. These dots carry values in terms of floating point numbers (initialised with 0). A dot ends when it encounters '&'. The program ends when all dots end.
+
+``This will be a comment in ASCII DOTS
+
+The slash operators act as mirrors, '/' redirects a left coming dot upwards, or a right coming dot downwards ('\' follows a similar function).
+
+The arrow operators '^' takes input from the left or right and redirects it upwards. '<', '>', 'v' follow similar function. 
+
+The '~' operator takes a dot from the bottom path and redirects the horizontally coming dot upwards if the dot arrived at the bottom has the value 0.
+
+Mathematical operators
+
+Primarily there are two types of mathematical operators.
+
+A mathematical operation inside '[]', for example multiplication, multiplies the value that passes through vertically by the value that runs into it horizontally.
+
+A mathematical operation inside '{}', for example division, divides the value that enters horizontally by the value that enters vertically.
+
+The mathematical operations possible are:
+
+
+*: multiplication
+/: division
+÷: also division
++: addition
+-: subtraction
+%: modulus
+^: exponent
+&: boolean AND
+!: boolean NOT
+o: boolean OR
+x: boolean XOR
+>: greater than
+G: greater than or equal to
+<: less than
+L: less than or equal to
+=: equal to
+!: not equal to
+
+In order to take input from the user, make use of the command '#?'.
+
+In order to output the values of the dot, use '$#'.
+In order to output the string use, $"Your string should be entered here".
+
+
+
+

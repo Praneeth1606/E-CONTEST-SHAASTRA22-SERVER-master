@@ -1,0 +1,43 @@
+                    LEAP YEARS
+
+Given a year, find out if it is a leap year or not.
+If the year is a multiple of 4 and not a multiple of 100, then the year is a leap year.
+If the year is a multiple of 400, then the year is a leap year.
+In all other cases, it is not a leap year.
+
+*********************************************************************************
+INPUT:
+A single integer 'y' that denotes the year. (0<y<=4000)
+
+CONSTRAINT: (0<y<4000)
+
+OUTPUT:
+Print 1 if the year is a leap year. Print 0 if it is not.
+*********************************************************************************
+
+Sample Input/Output:
+
+Input:
+2020
+Output:
+1
+
+Input:
+2000
+Output:
+1
+
+Input:
+1900
+Output:
+0
+
+Input:
+2021
+Output:
+0
+
+*********************************************************************************
+TIME ALLOWED : 5sec
+
+MEMORY LIMIT : Maximum 10^5 commands are only allowed.

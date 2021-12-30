@@ -1,0 +1,40 @@
+			        SIMPLE ARITHMETIC
+
+Beckham is learning the basic arithmetic in school and his teacher illustrates
+the theory with a simple example and asks him to solve the problem for his understanding.
+Beckham finds this interesting and tries to code it,
+hoping that it would help in future problems. Unfortunately, he is
+not very familiar with AsciiDots. Will you help Beckham solve his problem?
+
+Problem Statement
+
+Given an integer number, find the
+remainder obtained when seven added to four times the number is divided by eleven.
+
+*********************************************************************************
+Input: A single integer number 'n' : (1<=n<=999)
+
+Output: A single integer output indicating the answer.
+*********************************************************************************
+
+Example:
+
+Input:
+81
+Output:
+1
+
+Input:
+996
+Output:
+9
+
+Input:
+428
+Output:
+3
+
+*********************************************************************************
+TIME ALLOWED : 5sec
+
+MEMORY LIMIT : Maximum 10^5 commands are only allowed.
