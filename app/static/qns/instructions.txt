@@ -15,26 +15,39 @@ Then split, merge with some conditions or even disappear. Hope you find it super
 SYNTAX SHEET :
 ********************************************************************
 
-The dots are initialised by '.'. They travel horizontally along '-' and vertically along'|'. These dots carry values in terms of floating point numbers (initialised with 0). A dot ends when it encounters '&'. The program ends when all dots end.
+The dots are initialised by '.'. They travel horizontally along '-' and vertically along'|'.
+These dots carry values in terms of floating point numbers (initialised with 0).
 
-``This will be a comment in ASCII DOTS
+The program ends when any dot encounters '&'.
+Alternatively, it also ends when all dots die (i.e. they all pass over the end of a path into nothingness).
 
-The slash operators act as mirrors, '/' redirects a left coming dot upwards, or a right coming dot downwards ('\' follows a similar function).
+``This (two back ticks) will be a comment in ASCII DOTS
 
-The arrow operators '^' takes input from the left or right and redirects it upwards. '<', '>', 'v' follow similar function. 
+The slash operators act as mirrors,
+'/' redirects a left coming dot upwards, or a right coming dot downwards.
+('\' follows a similar function)
 
-The '~' operator takes a dot from the bottom path and redirects the horizontally coming dot upwards if the dot arrived at the bottom has the value 0.
+The arrow operators '^' moves any dot from the left or right and redirects it upwards.
+'<', '>', 'v' follow similar function in the respective directions (left, right and down).
+
+The '~' (tilde) operator redirects dots going through it horizontally to the upward path
+if a dot waiting at the bottom has a value *not* equal to 0. Otherwise, the dot continues horizontally.
+If an exclamation point (!) is under it, then it redirects the dot upwards only if the
+value of the dot waiting *is* equal to zero.
+
 
 Mathematical operators
 
 Primarily there are two types of mathematical operators.
 
-A mathematical operation inside '[]', for example multiplication, multiplies the value that passes through vertically by the value that runs into it horizontally.
+A mathematical operation inside '[]', for example multiplication, multiplies the value that
+passes through vertically by the value that runs into it horizontally. The dot passed through it horizontally
+is deleted and the dot that arrived from the top or bottom continues through to the other side.
 
-A mathematical operation inside '{}', for example division, divides the value that enters horizontally by the value that enters vertically.
+A mathematical operation inside '{}', for example division, divides the value that
+enters horizontally by the value that enters vertically. The resulting dot exits horizontally.
 
 The mathematical operations possible are:
-
 
 *: multiplication
 /: division
@@ -54,10 +67,14 @@ L: less than or equal to
 =: equal to
 !: not equal to
 
+Boolean operations return a dot with a value of 1 if the expression evaluates to true and 0 if false.
+These characters are only considered operators when located within brackets.
+When outside of brackets, symbols like * perform their regular functions as described earlier.
+
 In order to take input from the user, make use of the command '#?'.
 
 In order to output the values of the dot, use '$#'.
-In order to output the string use, $"Your string should be entered here".
+In order to output strings use, $"Your string should be entered here".
 
 
 
