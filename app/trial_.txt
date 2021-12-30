@@ -1,3 +1,0 @@
-1
-failed to import curses; running in compatibility mode
-1
