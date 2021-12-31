@@ -9,13 +9,13 @@ noTC = {'1': 1, '2': 5, '3': 5, '4': 5, '5': 16, '6': 5, '7': 5}
 
 def score(code, qn_no, pno):
     count = 0
-    #inputPath = './app/evaluation/input/qn' + qn_no
-    inputPath = 'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/input/qn' + qn_no
+    inputPath = './app/evaluation/input/qn' + qn_no
+    #inputPath = 'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/input/qn' + qn_no
     for filename in os.listdir(inputPath):
         if 'tc' in filename:
             fno = re.sub('[^0-9]+', '', filename)
-            #outputfilePath = './app/evaluation/output' + pno + '.txt'
-            outputfilePath = 'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/output' + pno + '.txt'
+            outputfilePath = './app/evaluation/output' + pno + '.txt'
+            #outputfilePath = 'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/output' + pno + '.txt'
             #programfilePath = './app/evaluation/program' + pno + '.txt'
             #programfilePath = 'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/program' + pno + '.txt'
 
@@ -42,10 +42,10 @@ def score(code, qn_no, pno):
             else:
                 Message = Q.get()
                 if Message == 'ANSWER WRITTEN':
-                    #with open('./app/evaluation/expected_output/qn'+qn_no+'/output-'+str(fno)+'.txt') as tgtfile :
-                    with open('C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/expected_output/qn' + qn_no + '/output-' + str(fno) + '.txt') as tgtfile:
-                        #if filecmp.cmp(outputfilePath,'./app/evaluation/expected_output/qn'+qn_no+'/output-'+str(fno)+'.txt') :
-                        if filecmp.cmp(outputfilePath,'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/expected_output/qn' + qn_no + '/output-' + str(fno) + '.txt'):
+                    with open('./app/evaluation/expected_output/qn'+qn_no+'/output-'+str(fno)+'.txt') as tgtfile :
+                    #with open('C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/expected_output/qn' + qn_no + '/output-' + str(fno) + '.txt') as tgtfile:
+                        if filecmp.cmp(outputfilePath,'./app/evaluation/expected_output/qn'+qn_no+'/output-'+str(fno)+'.txt') :
+                        #if filecmp.cmp(outputfilePath,'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/expected_output/qn' + qn_no + '/output-' + str(fno) + '.txt'):
                             pass
                         else:
                             tgtfile.close()
