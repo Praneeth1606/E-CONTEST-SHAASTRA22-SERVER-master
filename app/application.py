@@ -26,15 +26,15 @@ app.secret_key = 'Thisisnottobesharedtoanyone'
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=6)
 
-#ENV = 'PROD'
-ENV = 'dev'
+ENV = 'PROD'
+#ENV = 'dev'
 if ENV == 'dev' :
 	app.debug = True
 	#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:qwertyuiop@localhost:5432/my_db'
 else :
 	app.debug = False
-	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ofkyawpdjvlppl:e98959750f19e6517d4e8eabf5710d40bb4f7d5c1cb7b3ad0e645efee910acf3@ec2-174-129-234-111.compute-1.amazonaws.com:5432/dduv1ph7hquc21'
+	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://yycpzuwyeyxiut:79479000e6ebd0adf363e0db7cceedc3ee151c56587c6f3769532177ee38fe4a@ec2-34-206-245-175.compute-1.amazonaws.com:5432/d9a6leepo04rul'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
