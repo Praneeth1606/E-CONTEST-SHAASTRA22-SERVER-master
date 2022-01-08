@@ -1,0 +1,9 @@
+This is the text file to display an example problem.
+We shall test this in some time
+*************************************************
+Meanwhile, here will be the code solution.
+*************************************************
+Here comes the boring explanation,
+Blah - blah - blah
+blah - blah - blah
+
