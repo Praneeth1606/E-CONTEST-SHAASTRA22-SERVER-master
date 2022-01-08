@@ -68,6 +68,18 @@ function main_page_content() {
 		box2.style.display = 'none';
 		l1.style.display = 'none';
 	}
+	else if (val=='EX1') {
+	    $("#question-box").load("../static/qns/example1.txt");
+	    box1.style.display = 'block';
+	    box2.style.display = 'none';
+	    l1.style.display = 'none';
+	}
+	else if (val=='EX2') {
+	    $("#question-box").load("../static/qns/example2.txt");
+	    box1.style.display = 'block';
+	    box2.style.display = 'none';
+	    l1.style.display = 'none';
+	}
 	else {
 		box1.style.display = 'block';
 		box2.style.display = 'block';
