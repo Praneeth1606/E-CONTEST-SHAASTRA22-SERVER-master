@@ -1,4 +1,4 @@
-                    ADDING NUMBER GAME
+                        ADDING NUMBER GAME
 
 PROBLEM STATEMENT:
 A math teacher arranges a simple game in a classroom.
