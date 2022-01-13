@@ -1,10 +1,11 @@
                     COLOUR CODING
 
-In a particular software, colours have a very specific key-value pair as follows:
+In a particular software used by MTX, colours have a very specific key-value pair:
 		1 - Cyan
 		2 - Magenta
 		3 - Yellow
 		4 - Black
+
 The company is looking for a code in AsciiDots to execute this in such a way that
 for a given input integer 'n', the software outputs the corresponding colour.
 
