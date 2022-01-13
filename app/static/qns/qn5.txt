@@ -1,11 +1,11 @@
 				    INTERVIEW SHORTLIST
 
-An interview selection committee of a specific company takes into account
+The interview selection committee of MTX in a particular year considered
 the Grade Point Aggregate (GPA) and the marks scored by the candidate in their pre-placement test.
-The test is out of fifty marks and the GPA of any candidate is
-an integer between zero and ten (both inclusive).
-To make a Total Score out of a hundred, the committee multiplies
-the GPA by 5 and adds it to the test score.
+The test is out of fifty marks, and the GPA of any candidate is
+an 'integer' between zero and ten (both inclusive).
+To make the Total Score out of a hundred, the committee multiplies
+the GPA by five and adds it to the test score.
 
 Total Score = Test Score + (GPA*5)
 
