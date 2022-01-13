@@ -1,12 +1,40 @@
-Wait, what?
-Not this again...
+                                         Two too many
 
-This is the text file to display an example problem.
-We shall test this in some time
-*************************************************
-Meanwhile, here will be the code solution.
-*************************************************
-Here comes the boring explanation,
-Blah - blah - blah
-blah - blah - blah
+PROBLEM STATEMENT :
 
+You are given an integer an integer 'n' as input.
+Based on the input, you are required to output twice the value of 'n'.
+
+*********************************************************************************
+
+INPUT:
+One integer 'n' (0<=n<=100).
+
+OUTPUT:
+One integer, whose value is twice that of 'n'.
+
+*********************************************************************************
+Sample Input/Output:
+
+Input:
+2
+Output:
+4
+
+Input:
+11
+Output:
+22
+*********************************************************************************
+
+TIME ALLOWED : 5sec
+
+MEMORY LIMIT : Maximum 10^5 commands are only allowed.
+
+*********************************************************************************
+
+Solution:
+
+.--#?--\  ``Takes input of the integer 'a'
+.-#2--[*]  ``Initializes a  dot with the value 2 and multiplying with 'a'
+       \--$#--&  ``Prints output and terminates the program
