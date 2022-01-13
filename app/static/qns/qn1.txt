@@ -1,8 +1,6 @@
 				    SUM AND DIFFERENCE
 	
 PROBLEM STATEMENT :
-//American Express are deciding if they could allow 4 digit CVV pins instead of the existing
-//3 digit ones.
 The sum of two numbers is said to be "a" and their difference is said to be "b".
 Using the given esoteric language, can you write a program to help us find
 twice the value of the smaller number?
