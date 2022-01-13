@@ -1,9 +1,41 @@
-This is the text file to display an example problem.
-We shall test this in some time
-*************************************************
-Meanwhile, here will be the code solution.
-*************************************************
-Here comes the boring explanation,
-Blah - blah - blah
-blah - blah - blah
+                                Do you know addition?
 
+PROBLEM STATEMENT
+
+In lower classes we understood that 2+2 = 4. 
+Mathematically, we know what happens when there is a '+' (plus) sign 
+in between two numbers. The problem here is to take two whole numbers as input
+and replicate the addition to print their sum as the output in AsciiDots. 
+
+*********************************************************************************
+INPUT
+Two integers 'a' and 'b' (0<=a<=100, 0<=b<=100).
+
+OUTPUT
+A single integer which is the sum of the two numbers ('a' and 'b').
+
+*********************************************************************************
+
+Sample Input/Output
+
+Input:
+
+68
+16
+
+Output:
+
+84
+
+Time allowed : 5 sec
+
+MEMORY LIMIT : Maximum 10^5 commands are only allowed.
+
+*********************************************************************************
+
+Solution:
+
+.-#?---\  ``Takes input for 'a' (the first integer)
+       |
+.--#?-[+]   ``Takes input for 'b' (the second integer and adds them
+       \--$#-&   ``Prints output and terminates the program
