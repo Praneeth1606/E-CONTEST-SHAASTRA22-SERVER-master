@@ -3,11 +3,11 @@
 PROBLEM STATEMENT:
 A math teacher arranges a simple game in a classroom.
 The teacher picks a number at the beginning of each round and the students
-start counting from 1 at intervals of the fixed number.
-For example, if the teacher picks 4, the students at their turns would say a number from
+start counting from 1 at intervals of the fixed number 'n'.
+For example, if the teacher picks n=4, the students at their turns would say a number from
 the sequence 1, 5, 9, 13, 17... and so on until the sequence reaches a maximum value of 999
 (all numbers in the sequence will be less than or equal to 999).
-Given an integer k, find the 'k'th term of the sequence.
+For a given integer 'n', find the 'k'th term of the sequence.
 
 Note: The first term of the sequence is 1.
 
@@ -22,24 +22,26 @@ OUTPUT: A single integer that gives the 'k'th term of the sequence
 
 Sample input/output:
 
-Ex.1)
 
-I:
+Input:
 72
 4
-O:
+Output:
 217
+
 Explanation: The sequence is as follows:
 1 73 145 217 289 361 433 505 577 649 721 793 865 937
 The fourth term is 217
 
-Ex.2) 
 
-I:
+
+
+Input:
 47
 9
-O:
+Output:
 377
+
 Explanation:
 1 48 95 142 189 236 283 330 377 424 471 518 565 612 659 706 753 800 847 894 941 988
 The ninth term is 377
