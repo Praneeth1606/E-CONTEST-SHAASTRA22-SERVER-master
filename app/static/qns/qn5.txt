@@ -1,4 +1,4 @@
-                    LEAP YEARS
+                      LEAP YEARS
 
 In an ordinary year, if one were to count all the days in a calendar, 
 you'd count 365 days. As astronomical events do not repeat in a whole number of days,
@@ -15,9 +15,9 @@ In all other cases, it is not a leap year.
 
 *********************************************************************************
 INPUT:
-A single integer 'y' that denotes the year. (0<y<=4000)
+A single integer 'y' that denotes the year. 
 
-CONSTRAINT: (0<y<4000)
+CONSTRAINT: (1<=y<=4000)
 
 OUTPUT:
 Print '1' if the year is a leap year. Print '0' if it is not.
@@ -49,3 +49,4 @@ Output:
 TIME ALLOWED : 5sec
 
 MEMORY LIMIT : Maximum 10^5 commands are only allowed.
+
