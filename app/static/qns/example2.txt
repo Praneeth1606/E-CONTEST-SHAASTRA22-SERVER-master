@@ -39,5 +39,14 @@ Solution:
 .-#2--[*]  ``Initializes a  dot with the value 2 and multiplying with 'a'
        \--$#--&  ``Prints output and terminates the program
 
+Alternatively, the following also works:
+
+.---#?--*---\  ``Takes input, duplicates self and moves along two directions
+        |   |
+        \--{+}--$#--&   ``Adds the two dots, prints output and terminates the program
+
+
+
+
 
 
