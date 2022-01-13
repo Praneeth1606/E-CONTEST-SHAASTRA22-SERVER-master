@@ -1,4 +1,4 @@
-                    TWO TOO MANY
+                         TWO TOO MANY
 
 PROBLEM STATEMENT :
 
@@ -38,3 +38,6 @@ Solution:
 .--#?--\  ``Takes input of the integer 'a'
 .-#2--[*]  ``Initializes a  dot with the value 2 and multiplying with 'a'
        \--$#--&  ``Prints output and terminates the program
+
+
+
