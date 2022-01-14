@@ -9,6 +9,9 @@ window.onload = () => {
 		if(!localStorage.getItem("remtime")) {
 			localStorage.setItem("remtime",time.value);
 		}
+		else if(localStorage.getItem("remtime")!=time.value){
+		    localStorage.setItem("remtime", time.value);
+		}
 	    var rt = Number(localStorage.getItem("remtime"));
 	    disp.innerHTML = timeformat(rt);
 	    time.value = rt;

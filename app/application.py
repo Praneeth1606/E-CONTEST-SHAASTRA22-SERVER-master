@@ -116,8 +116,8 @@ pno = 0
 IST = pytz.timezone('Asia/Kolkata')
 utc = pytz.utc
 
-startTime = datetime(2022,1,14,7,25,0) #Datetimes in UTC
-endTime = datetime(2022,1,14,7,30,0)
+startTime = datetime(2022,1,14,8,30,0) #Datetimes in UTC
+endTime = datetime(2022,1,14,10,15,0)
 
 startTime = utc.localize(startTime).astimezone(IST)
 endTime = utc.localize(endTime).astimezone(IST)
@@ -133,6 +133,16 @@ def checkEndTime():
 	if(currTime>endTime):
 		return 1
 	return 0
+
+def returnRemTime():
+	return int((endTime - datetime.now(IST)).total_seconds())
+
+def setRemTime():
+	usr = User.query.filter_by(id=session['userid']).first()
+	usr.remTime = int(returnRemTime())
+	db.engine.execute(f"update users set rem_time = {returnRemTime()} where id = {session['userid']}")
+	db.session.commit()
+	return
 
 @socketio.on('disconnect')
 def disconnect_user():
@@ -201,7 +211,7 @@ def login() :
 					app.permanent_session_lifetime = timedelta(hours = 6)
 					session['username'] = user.username
 					session['userid'] = user.id
-					session['time'] = time.time()
+					session['time'] = returnRemTime()
 					user.done = True;
 					return redirect('/dashboard')
 			else :
@@ -222,6 +232,8 @@ def dashboard() :
 	except KeyError :
 		return redirect('/login')
 
+	setRemTime()
+
 	if checkEndTime():
 		disconnect_user()
 		# flash("Contest ended at " + endTime.strftime("%H:%M:%S %d/%m/%Y"))
@@ -239,6 +251,7 @@ def dashboard() :
 		return redirect('/login')
 
 	elif (request.method == 'POST' and 'code' in request.form) :
+		setRemTime()
 		if checkEndTime():
 			disconnect_user()
 			# flash("Contest ended at " + endTime.strftime("%H:%M:%S %d/%m/%Y"))
@@ -251,7 +264,8 @@ def dashboard() :
 			db.session.commit()
 		CODE = request.form.get('code')
 		qn = str(request.form.get('question-select'))
-		initTime = float(request.form.get('remtime'))
+		#initTime = float(request.form.get('remtime'))
+		initTime = returnRemTime()
 
 		res = 'Nothing yet'
 
@@ -321,13 +335,14 @@ def dashboard() :
 			pno += 1
 			currRes.tot_score = sum([e for e in scorel if e is not None])
 			currRes.tot_time = sum([decimal.Decimal(e) for e in timel if e is not None])
-			currRes.user.rem_time = 6000-init_time
+			#currRes.user.rem_time = 6000-init_time
+			currRes.user.rem_time = (endTime-startTime).total_seconds() - init_time
 
 			db.session.commit()
 
 
 		#flash(res)
-		threading.Thread(target = evaluate,args = (CODE,qn,6000-initTime)).start()
+		threading.Thread(target = evaluate,args = (CODE,qn,int((endTime-startTime).total_seconds()-initTime))).start()
 		flash('Solution Submitted Successfully')
 		return redirect('/dashboard')
 
@@ -360,7 +375,7 @@ def register() :
 		if (request.method == 'POST' and form.validate_on_submit()) :
 			if User.query.filter_by(username = form.username.data).count() == 0 :
 				#new_user = User(done=False, rem_time=6000, username=form.username.data,password=form.confirm_password.data, email=form.email.data,shaastraid=form.shaastraid.data, name=form.name.data, contact=form.contact.data)
-				new_user = User(id=db.session.query(User).count()+1,done=False, rem_time=6000, username=form.username.data,password=form.confirm_password.data, email=form.email.data,shaastraid=form.shaastraid.data, name=form.name.data, contact=form.contact.data)
+				new_user = User(id=db.session.query(User).count()+1,done=False, rem_time=int((endTime-startTime).total_seconds()), username=form.username.data,password=form.confirm_password.data, email=form.email.data,shaastraid=form.shaastraid.data, name=form.name.data, contact=form.contact.data)
 				db.session.add(new_user)
 				db.session.commit()
 				error='Successfully Registered Contestant'
