@@ -5,7 +5,7 @@ from wtforms.validators import InputRequired, Email, Length, EqualTo
 from flask_session import Session
 import os
 #from app.class_orm import db,User,Result,Submission
-import time
+import time, pytz
 from datetime import datetime, timedelta
 #from werkzeug import generate_password_hash,check_password_hash
 import threading
@@ -113,6 +113,27 @@ register_url = '/register'
 
 pno = 0
 
+IST = pytz.timezone('Asia/Kolkata')
+utc = pytz.utc
+
+startTime = datetime(2022,1,14,7,25,0) #Datetimes in UTC
+endTime = datetime(2022,1,14,7,30,0)
+
+startTime = utc.localize(startTime).astimezone(IST)
+endTime = utc.localize(endTime).astimezone(IST)
+
+def checkStartTime():
+	currTime = datetime.now(IST)
+	if(currTime<startTime):
+		return 1
+	return 0
+
+def checkEndTime():
+	currTime = datetime.now(IST)
+	if(currTime>endTime):
+		return 1
+	return 0
+
 @socketio.on('disconnect')
 def disconnect_user():
 	if 'userid' in session :
@@ -155,6 +176,18 @@ def login() :
 		form = LoginForm(request.form);
 
 		error = None
+		if checkStartTime():
+			#flash("You're early. The contest starts at " + startTime.strftime("%H:%M:%S %d/%m/%Y"))
+			error = "You're early. The contest starts at IST " + startTime.strftime("%H:%M:%S %d/%m/%Y")
+			return render_template('login.html', form=form, error=error)
+
+		if checkEndTime():
+			disconnect_user()
+			# flash("Contest ended at " + endTime.strftime("%H:%M:%S %d/%m/%Y"))
+			error = "Contest ended at IST " + endTime.strftime(
+				"%H:%M:%S %d/%m/%Y") + '\nFind standings at e-contest.herokuapp.com/standings'
+			return render_template('login.html', form=form, error=error)
+		# return redirect('/standings')
 		if (request.method == 'POST' and form.validate_on_submit()) :
 			user = User.query.filter_by(username = form.username.data).first()
 			if user is None :
@@ -189,6 +222,12 @@ def dashboard() :
 	except KeyError :
 		return redirect('/login')
 
+	if checkEndTime():
+		disconnect_user()
+		# flash("Contest ended at " + endTime.strftime("%H:%M:%S %d/%m/%Y"))
+		error = "Contest ended at IST " + endTime.strftime(
+			"%H:%M:%S %d/%m/%Y") + '\nFind standings at e-contest.herokuapp.com/standings'
+		return render_template('login.html', form=LoginForm(), error=error)
 	if (request.method == 'POST' and ('quit' in request.form or 'remTime' in request.form)) :
 		usr = User.query.filter_by(id = session['userid']).first()
 		usr.done = True
@@ -200,6 +239,12 @@ def dashboard() :
 		return redirect('/login')
 
 	elif (request.method == 'POST' and 'code' in request.form) :
+		if checkEndTime():
+			disconnect_user()
+			# flash("Contest ended at " + endTime.strftime("%H:%M:%S %d/%m/%Y"))
+			error = "Contest ended at IST " + endTime.strftime(
+				"%H:%M:%S %d/%m/%Y") + '\nFind standings at e-contest.herokuapp.com/standings'
+			return render_template('login.html', form=LoginForm(), error=error)
 		if Result.query.filter_by(userid = session['userid']).count() == 0 :
 			res = Result(userid = session['userid'])
 			db.session.add(res)
@@ -305,14 +350,21 @@ def register() :
 	except KeyError :
 		error = None
 		form = SignupForm(request.form)
+		if checkEndTime():
+			disconnect_user()
+			# flash("Contest ended at " + endTime.strftime("%H:%M:%S %d/%m/%Y"))
+			error = "Contest ended at IST " + endTime.strftime(
+				"%H:%M:%S %d/%m/%Y") + '\nFind standings at e-contest.herokuapp.com/standings'
+			return render_template('login.html', form=LoginForm(), error=error)
 
 		if (request.method == 'POST' and form.validate_on_submit()) :
 			if User.query.filter_by(username = form.username.data).count() == 0 :
 				#new_user = User(done=False, rem_time=6000, username=form.username.data,password=form.confirm_password.data, email=form.email.data,shaastraid=form.shaastraid.data, name=form.name.data, contact=form.contact.data)
 				new_user = User(id=db.session.query(User).count()+1,done=False, rem_time=6000, username=form.username.data,password=form.confirm_password.data, email=form.email.data,shaastraid=form.shaastraid.data, name=form.name.data, contact=form.contact.data)
 				db.session.add(new_user)
-				db.session.commit() 
-				return '<h1>' + 'Successfully Registered Contestant' + '</h1>'
+				db.session.commit()
+				error='Successfully Registered Contestant'
+				return render_template('login.html', form=LoginForm(), error=error)
 			else :
 				error = "Username already Registered"
 
@@ -335,6 +387,12 @@ def submissions() :
 		session['userid'] 
 	except KeyError :
 		return redirect('/login')
+	if checkEndTime():
+		disconnect_user()
+		# flash("Contest ended at " + endTime.strftime("%H:%M:%S %d/%m/%Y"))
+		error = "Contest ended at IST " + endTime.strftime(
+			"%H:%M:%S %d/%m/%Y") + '\nFind standings at e-contest.herokuapp.com/standings'
+		return render_template('login.html', form=LoginForm(), error=error)
 	usr = User.query.filter_by(id = session['userid']).first()
 	subs = usr.submission
 	return render_template('submissions.html',name = session['username'],submissions = subs,to_time = time.strftime,to_ttuple = time.gmtime)
