@@ -1,15 +1,46 @@
 
 Welcome to Shaastra's E-Contest.
-The 'E' in E-Contest stands for Esoteric Languages(you might have guessed this already),
-the contest deals with solving basic questions in a language which hopefully is completely new to you.
+The 'E' in E-Contest stands for Esoteric Languages(you might have guessed this already).
+This contest deals with solving basic questions in a language which hopefully is completely new to you.
 
-This time, we have chosen the language as "ASCII DOTS". 
+This time, the language chosen is "AsciiDots".
 
-It is fun language which is very different from the conventional programming languages
-such as python, C++ etc. The languages employs dots which travel along various paths.
-Then split, merge with some conditions or even disappear. Hope you find it super fun and All the best.
+It is a fun language which is very different from the conventional programming languages
+such as python, C++ etc. The language uses dots which travel along various paths.
+They can split, merge with some conditions and operators or even disappear.
 
-***** NOTE ***** You can view this sheet whenever you want during the contest, so use your time wisely
+At first sight, it might seem to be a rudimentary language, using which not many things can be achieved,
+but it is in fact a Turing complete Language!
+In other words you can code whatever you’d want to in this language! Mind-boggling, isn’t it?
+However practically it cannot be deployed for any serious purpose given the fact that it is
+extremely difficult to comprehend and takes time and a lot more brains to code anything useful.
+
+***** NOTE ***** You can view this sheet whenever you want during the contest, so use your time wisely.
+
+*********************************************************************
+GENERAL INSTRUCTIONS
+*********************************************************************
+
+**** You are allowed to use any online IDE (one link is provided along with the questions)
+for your quick checking and debugging of your program before submitting ****
+https://tio.run/#asciidots
+(NOTE: There are other IDEs online that helps debug better than this one. We prefer using this IDE as it provides more accurate runtime.)
+
+
+**** The time limit for all questions is 5 seconds.
+If any program that takes longer than that on the online IDE we have provided,
+press "STOP" (as it is surely due to an infinite loop only, no AsciiDots program we write now takes that much time) ****
+
+**** Don't spam the submit button or any other button. It takes a little time to update your submissions and the standings. Please press once and wait. ****
+
+**** All the questions carry the same weightage, so feel free to change between questions and solve them in any order as you wish.
+Though it is arranged almost in increasing order of difficulty, it was difficult for us to decide the ordering itself! ****
+
+**** If there are ties in number of problems solved, the rankings will be decided based on submission time. ****
+
+**** In any case of further ties or discrepancies, the final call will be taken by the event coordinators. ****
+
+**** Hope you find it super fun and All the best. ****
 
 ********************************************************************
 SYNTAX SHEET :
@@ -21,13 +52,13 @@ These dots carry values in terms of floating point numbers (initialised with 0).
 The program ends when any dot encounters '&'.
 Alternatively, it also ends when all dots die (i.e. they all pass over the end of a path into nothingness).
 
-``This (two back ticks) will be a comment in ASCII DOTS
+``This (two back ticks) indicates a comment in ASCII DOTS
 
 The slash operators act as mirrors,
 '/' redirects a left coming dot upwards, or a right coming dot downwards.
 ('\' follows a similar function)
 
-The arrow operators '^' moves any dot from the left or right and redirects it upwards.
+The arrow operators, such as '^' redirects any dot from the left or right, upwards.
 '<', '>', 'v' follow similar function in the respective directions (left, right and down).
 
 The '~' (tilde) operator redirects dots going through it horizontally to the upward path
@@ -74,6 +105,7 @@ When outside of brackets, symbols like * perform their regular functions as desc
 In order to take input from the user, make use of the command '#?'.
 
 In order to output the values of the dot, use '$#'.
+
 In order to output strings use, $"Your string should be entered here".
 
 

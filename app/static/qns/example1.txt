@@ -1,5 +1,8 @@
                         GETTING STARTED WITH ADDITION
 
+Here are some basic examples to help you walk through this language.
+(Ideally, we would've started with the 'Hello, World!' but it would've been too easy here)
+
 PROBLEM STATEMENT
 
 In lower classes we understood that 2+2 = 4. 
@@ -41,4 +44,5 @@ Solution:
        \--$#-&   ``Prints output and terminates the program
 
 
+Of course, there are many other ways to replicate the result, you just need to get the output right.
 

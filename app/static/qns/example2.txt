@@ -46,6 +46,7 @@ Alternatively, the following also works:
         \--{+}--$#--&   ``Adds the two dots, prints output and terminates the program
 
 
+We don't really care which method you use, as long as the answer is right.
 
 
 

@@ -83,7 +83,7 @@ body, html {
 	position : fixed;
 	z-index : 1;
 	width : 100%;
-	background-color : rgb(25, 155, 158); 
+	background-color : #FE9B01;
 	text-align: center;
 	vertical-align: middle;
 	height : 4em;
@@ -151,7 +151,7 @@ input[type=text], input[type=submit], input[type=password] {
   padding-right: 0.6em;
   margin: 4% 8% 4% 8%;
   display: inline-block;
-  border: 0.1em solid rgb(25, 155, 158);
+  border: 0.1em solid #FE9B01;
   font-size: large;
 }
 
@@ -161,7 +161,7 @@ input[type=password] {
 
 input[type=submit] {
   margin: 8%;
-  background-color : rgb(25, 155, 158);
+  background-color : #FE9B01;
   color : white;
   border : none;
 }
@@ -192,13 +192,14 @@ input[type=submit]:hover {
 	height : 40em;
 	top : 10em;
 	left : 5%;
-	background-color: whitesmoke;
+	background-color: #191919;
 	overflow: auto;
 	white-space: pre;
 	font-size: 16px;
 	font-family: "Courier New", Courier, monospace, Helvetica, Arial, serif;
 	font-weight: 600;
 	font-style: normal;
+	color: #ECDBBA;
 	border : 3px solid rgb(10, 198, 244);
 	display : none;
 }
@@ -221,9 +222,10 @@ input[type=submit]:hover {
 	display : none;
 	position : relative;
 	width : 18%;
-	top : 4em;
+	top : 2.75em;
 	left : 4em;
-	background-color: whitesmoke;
+	/*background-color: #262E31;*/
+	color:#EEEEEE;
 	text-align: center;
 	font-size: 20px;
 }
@@ -231,9 +233,10 @@ input[type=submit]:hover {
 #quick-link-right {
 	position : relative;
 	width : 18%;
-	top : 2.5em;
+	top : 0.5em;
 	left : 75%;
-	background-color: whitesmoke;
+	/*background-color: #262E31;*/
+	color: #EEEEEE;
 	text-align: center;
 	font-size: 20px;
 }
@@ -250,7 +253,7 @@ input[type=submit]:hover {
 	width : 7em;
 	height: 4%;
 	text-align: center;
-	background-color: rgb(245, 160, 8);
+	background-color: #345995;
 }
 
 .go-back-link a {
@@ -263,11 +266,11 @@ input[type=submit]:hover {
 
 a {
 	text-decoration: none;
-	color : rgb(25,155,158);
+	color : #FE9B01;
 }
 
 a:hover {
-	background-color: rgb(25, 155, 158);
+	background-color: #FE9B01;
 	color : white;
 }
 
@@ -298,17 +301,20 @@ h3 {
     height : 2em;
     padding-left: 0.6em;
     padding-right: 0.6em;
-    margin: 1.2em 0 1.2em 1%;
+    margin: 1.2em 0 1.2em 42%;
     display: inline-block;
     font-size: 100%;
-    border: 0.1em solid rgb(25, 155, 158);
+    border: 0.1em solid #0F4D92;
+    border-radius: 8px;
+    background-color: #0F4D92;
+    text-align:center;
 }
 
 #quit {
 	margin : 0;
 	padding : 0;
 	display : block;
-	text-align : center; 
+	text-align : center;
 	position: fixed;
 	float : right;
 	z-index : 3;
@@ -316,12 +322,13 @@ h3 {
 	left : 3.5em;
 	width : 10%;
 	height: 7%;
-	background-color: rgb(245, 160, 8);
+	background-color: #345995;
 }
 
 .table-container {
 	position : relative;
 	top : 1em;
+	background-color: #000000;
 	width: 100%;
 	overflow-x : auto;
 	white-space: nowrap;
@@ -341,7 +348,7 @@ td, th {
 }
 
 th {
-	background-color: rgb(10, 198, 244);
+	background-color: #0F4892;
 }
 
 tr:nth-child(even) {
@@ -354,11 +361,11 @@ tr:nth-child(odd) {
 
 tr td:first-child:before
 {
-  counter-increment: Count-Value;   
+  counter-increment: Count-Value;
   content: counter(Count-Value);
 }
 
-#space-span {
+.space-span {
 	display: inline-block;
 	width : 40%;
 }
@@ -368,7 +375,7 @@ tr td:first-child:before
   min-width: 30%;
   margin-left: -125px;
   background-color: white;
-  color: rgb(25, 155, 158);
+  color: #FE9B01;
   text-align: center;
   border-radius: 2px;
   padding: 16px;
@@ -411,11 +418,11 @@ tr td:first-child:before
 #timer {
     min-width: 9%;
     margin-right: -125px;
-    background-color: rgb(245, 160, 8);
+    background-color: #345995;
     color: white;
     text-align: center;
     border-radius: 2px;
-    padding: 16px;
+    padding: 12px;
     position: fixed;
     z-index: 3;
     left: 0%;
