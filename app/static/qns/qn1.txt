@@ -1,9 +1,9 @@
 			        SIMPLE ARITHMETIC
 
-Beckham is learning the basic arithmetic in school and his teacher illustrates
+Beckham is learning basic arithmetic in school and his teacher illustrates
 the theory with a simple example and asks him to solve the problem for his understanding.
-Beckham finds this interesting and tries to code it,
-hoping that it would help in future problems. Unfortunately, he is
+Beckham finds this exciting and tries to code it,
+hoping that it will help in future problems. Unfortunately, he is
 not very familiar with AsciiDots. Will you help Beckham solve his problem?
 
 Problem Statement
