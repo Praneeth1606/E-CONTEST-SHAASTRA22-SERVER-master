@@ -145,6 +145,14 @@ h1 {
     padding-top: 3%
 }
 
+.click-register{
+    color: #ECDBBA;
+    position:relative;
+    margin: 0;
+    font-family: Arial sans-serif sans;
+    text-align:center;
+}
+
 .register-container {
 	position : relative;
 	top : 5em;
