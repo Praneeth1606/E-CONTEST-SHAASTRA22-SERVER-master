@@ -21,6 +21,9 @@ extremely difficult to comprehend and takes time and a lot more brains to code a
 GENERAL INSTRUCTIONS
 *********************************************************************
 
+**** There are five questions in this contest that are to be solved in *2hours*
+(The contest ends at 17:00 IST) ***
+
 **** The basic syntax required to solve the problems in this contest is given below.
 You are also allowed to search through the internet for the complete documentation. ****
 
