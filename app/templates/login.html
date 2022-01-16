@@ -26,6 +26,8 @@ Contestants Login Page
 <div class = "content">
 	<form name = "login_form" method = "POST" action = "{{url_for('login')}}">
 		<div class = "login-container">
+			<h3 class = "login_register-title">LOGIN </h3>
+			<br/>
 			{{form.hidden_tag()}}
 			{{form.username(placeholder = "Username")}}
 			<br/>

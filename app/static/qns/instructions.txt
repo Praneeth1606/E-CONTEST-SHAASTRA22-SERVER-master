@@ -21,24 +21,33 @@ extremely difficult to comprehend and takes time and a lot more brains to code a
 GENERAL INSTRUCTIONS
 *********************************************************************
 
+**** The basic syntax required to solve the problems in this contest is given below.
+You are also allowed to search through the internet for the complete documentation. ****
+
 **** You are allowed to use any online IDE (one link is provided along with the questions)
 for your quick checking and debugging of your program before submitting ****
 https://tio.run/#asciidots
-(NOTE: There are other IDEs online that helps debug better than this one. We prefer using this IDE as it provides more accurate runtime.)
-
+(NOTE: There are other IDEs online that helps debug better than this one.
+We prefer using this IDE as it provides more accurate runtime.)
 
 **** The time limit for all questions is 5 seconds.
 If any program that takes longer than that on the online IDE we have provided,
-press "STOP" (as it is surely due to an infinite loop only, no AsciiDots program we write now takes that much time) ****
+press "STOP" (as it is surely due to an infinite loop only,
+no AsciiDots program we write now takes that much time) ****
 
-**** Don't spam the submit button or any other button. It takes a little time to update your submissions and the standings. Please press once and wait. ****
+**** Don't spam the submit button or any other button.
+It takes a little time to update your submissions and the standings. Please press once and wait. ****
 
-**** All the questions carry the same weightage, so feel free to change between questions and solve them in any order as you wish.
-Though it is arranged almost in increasing order of difficulty, it was difficult for us to decide the ordering itself! ****
+**** All the questions carry the same weightage,
+so feel free to change between questions and solve them in any order as you wish.
+Though it is arranged almost in increasing order of difficulty,
+it was difficult for us to decide the ordering itself! ****
 
-**** If there are ties in number of problems solved, the rankings will be decided based on submission time. ****
+**** If there are ties in number of problems solved,
+the rankings will be decided based on submission time. ****
 
-**** In any case of further ties or discrepancies, the final call will be taken by the event coordinators. ****
+**** In any case of further ties or discrepancies,
+the final call will be taken by the event coordinators. ****
 
 **** Hope you find it super fun and All the best. ****
 
@@ -48,6 +57,12 @@ SYNTAX SHEET :
 
 The dots are initialised by '.'. They travel horizontally along '-' and vertically along'|'.
 These dots carry values in terms of floating point numbers (initialised with 0).
+
+NOTE: Although these dots carry floating point numbers,
+when initialised with an integer they do not display the decimal point.
+So at any point in the contest if you are asked to work with integers,
+it means to take input or display the output without the decimal point and decimal places.
+(The decimal places aren't added unless there is a division or explicit input of numbers with decimal places.)
 
 The program ends when any dot encounters '&'.
 Alternatively, it also ends when all dots die (i.e. they all pass over the end of a path into nothingness).

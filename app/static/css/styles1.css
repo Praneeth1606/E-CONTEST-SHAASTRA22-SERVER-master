@@ -126,10 +126,23 @@ h1 {
 	top : 5em;
 	left : 30%;
 	width : 40%;
-	height : 25em;
-	background-color : white;
+	height : 27em;
+	background-color : #191919;
+	/*color: #ECDBBA;*/
 	padding-top: 1.2em;
 	padding-bottom: 1.2em;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.login_register-title{
+    color: #ECDBBA;
+    font-family: Arial sans-serif sans;
+    text-align:center;
+    padding-top: 3%
 }
 
 .register-container {
@@ -137,9 +150,9 @@ h1 {
 	top : 5em;
 	left : 30%;
 	width : 40%;
-	height : 58em;
+	height : 60em;
 	margin-bottom: 3em;
-	background-color : white;
+	background-color : #191919;
 	padding-top: 1.2em;
 	padding-bottom: 1.2em;
 }
@@ -149,6 +162,7 @@ input[type=text], input[type=submit], input[type=password] {
   height : 3.8em;
   padding-left: 0.6em;
   padding-right: 0.6em;
+  background-color: #777777;
   margin: 4% 8% 4% 8%;
   display: inline-block;
   border: 0.1em solid #FE9B01;
@@ -374,7 +388,7 @@ tr td:first-child:before
   visibility: hidden;
   min-width: 30%;
   margin-left: -125px;
-  background-color: white;
+  background-color: black;
   color: #FE9B01;
   text-align: center;
   border-radius: 2px;

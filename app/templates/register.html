@@ -26,6 +26,8 @@ Contestant Registration Page
 <div class = "content">
 	<form name = "register_form" method = "POST" action = "{{url_for('register')}}">
 		<div class = "register-container">
+			<h3 class = "login_register-title">REGISTER </h3>
+			<br/>
 			{{form.hidden_tag()}}
 			{{form.shaastraid(placeholder = "Shaastra ID")}}
 			<br/>
