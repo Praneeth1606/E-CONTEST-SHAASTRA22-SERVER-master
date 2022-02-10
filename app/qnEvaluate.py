@@ -16,13 +16,7 @@ def score(code, qn_no, pno):
             fno = re.sub('[^0-9]+', '', filename)
             outputfilePath = './app/evaluation/output' + pno + '.txt'
             #outputfilePath = 'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/output' + pno + '.txt'
-            #programfilePath = './app/evaluation/program' + pno + '.txt'
-            #programfilePath = 'C:/Users/Admin/PycharmProjects/E-CONTEST-SHAASTRA20-SERVER-MASTER/app/evaluation/program' + pno + '.txt'
-
-            #with open(programfilePath, 'wb') as f:
-            #    f.write(bytes(code, 'utf-8'))
-
-            #with open(outputfilePath, 'w+') as mfile:
+            
             count += 1
             inpfilePath = inputPath + '/' + filename
             Q = multiprocessing.Queue()
@@ -37,7 +31,6 @@ def score(code, qn_no, pno):
                 prc.join(1)
                 #mfile.close()
                 os.remove(outputfilePath)
-                #os.remove(programfilePath)
                 return 'TIME LIMIT EXCEEDED'
             else:
                 Message = Q.get()
@@ -51,14 +44,11 @@ def score(code, qn_no, pno):
                             tgtfile.close()
                             #mfile.close()
                             os.remove(outputfilePath)
-                            #os.remove(programfilePath)
                             return 'WRONG ANSWER'
                 else:
                     #mfile.close()
                     os.remove(outputfilePath)
-                    #os.remove(programfilePath)
                     return Message
 
     os.remove(outputfilePath)
-    #os.remove(programfilePath)
     return 'CORRECT ANSWER'
