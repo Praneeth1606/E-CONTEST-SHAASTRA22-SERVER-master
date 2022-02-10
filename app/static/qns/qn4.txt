@@ -9,13 +9,13 @@ the GPA by five and adds it to the test score.
 
 Total Score = Test Score + (GPA*5)
 
-After this, the committee categorizes the students into three groups - 
+After this, the MTX committee categorizes the students into three groups - 
 
 Not Selected ->  0 < Total Score < 50
 Wait List -> 50<= Total Score < 75
 Selected -> 75<= Total Score
 
-You are required to predict if the person is Not Selected, in Wait List or in Selected. 
+You are required to help MTX find out if the person is Not Selected, Selected or in Wait List. 
 
 *********************************************************************************
 INPUT:
