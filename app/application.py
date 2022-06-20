@@ -34,7 +34,7 @@ if ENV == 'dev' :
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:qwertyuiop@localhost:5432/my_db'
 else :
 	app.debug = False
-	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://yycpzuwyeyxiut:79479000e6ebd0adf363e0db7cceedc3ee151c56587c6f3769532177ee38fe4a@ec2-34-206-245-175.compute-1.amazonaws.com:5432/d9a6leepo04rul'
+	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://'  #Enter your AWS server link here.
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
