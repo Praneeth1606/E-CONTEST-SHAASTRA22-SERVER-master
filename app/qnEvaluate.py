@@ -30,7 +30,7 @@ def score(code, qn_no, pno):
                 prc.terminate()
                 prc.join(1)
                 #mfile.close()
-                os.remove(outputfilePath)
+#                 os.remove(outputfilePath)
                 return 'TIME LIMIT EXCEEDED'
             else:
                 Message = Q.get()
@@ -43,12 +43,12 @@ def score(code, qn_no, pno):
                         else:
                             tgtfile.close()
                             #mfile.close()
-                            os.remove(outputfilePath)
+#                             os.remove(outputfilePath)
                             return 'WRONG ANSWER'
                 else:
                     #mfile.close()
-                    os.remove(outputfilePath)
+#                     os.remove(outputfilePath)
                     return Message
 
-    os.remove(outputfilePath)
+#     os.remove(outputfilePath)
     return 'CORRECT ANSWER'
